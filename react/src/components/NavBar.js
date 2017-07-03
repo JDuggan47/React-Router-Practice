@@ -6,7 +6,7 @@ const NavBar = props => {
   return(
     <div>
     <BackButton />
-    <h1>I HOPE THIS WORKS!</h1>
+    <Link to='/'>See All The Battles</Link>
     {props.children}
     </div>
   )

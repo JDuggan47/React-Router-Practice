@@ -196,3 +196,40 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-07-03 15:46:37 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 479ms (Views: 477.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-03 15:50:00 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-03 15:50:38 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 459ms (Views: 458.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/battles/1" for ::1 at 2017-07-03 15:50:55 -0400
+Processing by StaticPagesController#index as HTML
+  Parameters: {"all"=>"battles/1"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/battles/2" for ::1 at 2017-07-03 15:51:03 -0400
+Processing by StaticPagesController#index as HTML
+  Parameters: {"all"=>"battles/2"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
