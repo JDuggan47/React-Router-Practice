@@ -7,6 +7,7 @@ const NavBar = props => {
     <div>
     <BackButton />
     <Link to='/'>See All The Battles</Link>
+    <Link to='/battles/new'>Add A New Battle!</Link>
     {props.children}
     </div>
   )

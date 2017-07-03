@@ -233,3 +233,17 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-07-03 16:01:07 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 543ms (Views: 541.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-03 16:01:55 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 478ms (Views: 476.7ms | ActiveRecord: 0.0ms)
+
+
