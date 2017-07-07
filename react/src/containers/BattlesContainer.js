@@ -10,6 +10,7 @@ class BattlesContainer extends Component {
   }
 
   getData() {
+    debugger;
     fetch('/api/v1/battles')
       .then(response => {
         if (response.ok) {
@@ -30,7 +31,7 @@ class BattlesContainer extends Component {
   componentDidMount() {
     this.getData();
   }
-  
+
   render(){
       let battles = this.state.battles.map(battle => {
         return(
@@ -38,9 +39,6 @@ class BattlesContainer extends Component {
             key={battle.id}
             id={battle.id}
             name={battle.name}
-            year={year.name}
-            location={location.name}
-            winner={winner.name}
           />
         )
       })
