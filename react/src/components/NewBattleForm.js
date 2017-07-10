@@ -2,15 +2,12 @@ import React from 'react';
 
 const NewBattleForm = props => {
   return (
-    <div>
-      <label>{props.label}
+    <div className='row'>
         <textarea
-          name={props.name}
-          type='text'
+          type='text' id='middle-label' placeholder={props.label}
           value={props.content}
           onChange={props.handleFunction}
         />
-      </label>
     </div>
   )
 }

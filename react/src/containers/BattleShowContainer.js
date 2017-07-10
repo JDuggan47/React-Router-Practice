@@ -9,7 +9,7 @@ class BattleShowContainer extends Component {
 
   render() {
     return(
-      <h1>This Show Page Is Working!!!</h1>
+      <h1>The Showpage Is Working!!!</h1>
     )
   }
 }

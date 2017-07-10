@@ -82,35 +82,39 @@ class CreateBattle extends Component {
   render() {
     return(
       <div>
-        <h1>Submit a Battle!</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          <NewBattleForm
-            content={this.state.name}
-            label='Name of Battle'
-            name='Name'
-            handleFunction={this.handleNameChange}
-          />
-          <NewBattleForm
-            content={this.state.location}
-            label='Location of Battle'
-            name='Location'
-            handleFunction={this.handleLocationChange}
-          />
-          <NewBattleForm
-            content={this.state.year}
-            label='Year of Battle'
-            name='Year'
-            handleFunction={this.handleYearChange}
-          />
-          <NewBattleForm
-            content={this.state.winner}
-            label='Winner of Battle'
-            name='Winner'
-            handleFunction={this.handleWinnerChange}
-          />
-          <button onClick={this.handleClearForm}/>
-          <input type='submit' value='Submit'/>
-        </form>
+        <h1 className='text-center'>Submit a Battle!</h1>
+        <div className='row'>
+          <form onSubmit={this.handleFormSubmit}>
+            <NewBattleForm
+              content={this.state.name}
+              label='Name of Battle'
+              name='Name'
+              handleFunction={this.handleNameChange}
+            />
+            <NewBattleForm
+              content={this.state.location}
+              label='Location of Battle'
+              name='Location'
+              handleFunction={this.handleLocationChange}
+            />
+            <NewBattleForm
+              content={this.state.year}
+              label='Year of Battle'
+              name='Year'
+              handleFunction={this.handleYearChange}
+            />
+            <NewBattleForm
+              content={this.state.winner}
+              label='Winner of Battle'
+              name='Winner'
+              handleFunction={this.handleWinnerChange}
+            />
+            <div className='button-group'>
+              <button className='button' onClick={this.handleClearForm}>Clear</button>
+              <input className='button' type='submit' value='Submit' />
+            </div>
+          </form>
+        </div>
       </div>
     )
   }

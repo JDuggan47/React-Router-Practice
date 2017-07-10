@@ -43,8 +43,8 @@ class BattlesContainer extends Component {
         )
       })
     return(
-      <div>
-        <h1>Checkout the Major Civl War Battles That People Have Submitted!</h1>
+      <div className='row'>
+        <h1 className='text-center'>Checkout the Major Civl War Battles That People Have Submitted!</h1>
         {battles}
       </div>
     )

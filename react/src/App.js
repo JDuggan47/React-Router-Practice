@@ -13,7 +13,7 @@ const App = props => {
       <Route path='/' component={NavBar}>
         <IndexRoute component={BattlesContainer}/>
         <Route path='/battles/new' component={CreateBattle}/>
-        <Route path='/battles/:id' component={BattlesContainer}/>
+        <Route path='/battles/:id' component={BattleShowContainer}/>
       </Route>
     </Router>
   )
