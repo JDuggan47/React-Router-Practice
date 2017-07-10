@@ -4,13 +4,12 @@ class BattleShowContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-
     }
   }
 
   render() {
     return(
-      <h1>This Show Page Is Working!!!</h1>
+      <h1>The Showpage Is Working!!!</h1>
     )
   }
 }

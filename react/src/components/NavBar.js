@@ -4,11 +4,13 @@ import BackButton from './BackButton'
 
 const NavBar = props => {
   return(
-    <div>
-    <BackButton />
-    <Link to='/'>See All The Battles</Link>
-    <Link to='/battles/new'>Add A New Battle!</Link>
-    {props.children}
+    <div className='row'>
+      <ul className='menu align-center'>
+        <BackButton />
+        <Link to='/'>See All The Battles</Link>
+        <Link to='/battles/new'>Add A New Battle!</Link>
+        {props.children}
+      </ul>
     </div>
   )
 }
