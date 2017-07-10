@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import BattleTile from '../components/BattleTile';
+import 'whatwg-fetch';
 
 class BattlesContainer extends Component {
   constructor(props){
@@ -13,6 +14,7 @@ class BattlesContainer extends Component {
     debugger;
     fetch('/api/v1/battles')
       .then(response => {
+        debugger;
         if (response.ok) {
           return response;
         } else {
