@@ -4129,3 +4129,981 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:36:39 -0400
+  
+ArgumentError (Unknown validator: 'EmailValidator'):
+  
+app/models/user.rb:16:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.5ms)
+Started DELETE "/users/sign_out" for ::1 at 2017-07-10 15:37:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/sign_out"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.0ms)
+Started GET "/" for ::1 at 2017-07-10 15:46:02 -0400
+  
+ArgumentError (Unknown validator: 'EmailValidator'):
+  
+app/models/user.rb:16:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.9ms)
+Started GET "/" for ::1 at 2017-07-10 15:46:41 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 179ms (Views: 169.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:46:44 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (24.7ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.8ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (131.6ms)
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Started DELETE "/users/sign_out" for ::1 at 2017-07-10 15:47:12 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aVzOPljYULkBopQ7i/icC9rBtD+/skQwPcLUgfxUOEFG3Ut+FdLuIxFa/Wuv2Aiw8vtJt5Hwylqa1m1HLeRqEQ=="}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 15:47:12 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:47:14 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (129.4ms)
+Started GET "/users/sign_in" for ::1 at 2017-07-10 15:47:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-07-10 15:47:20 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 176ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-07-10 15:47:57 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUroSUWVS4Rxe7SU+4fulDspcpHiBbte3xPraRd3P2RxefIZsU9Tk6bHTB/TLypaDpF5twVdJFA05csOEJaW8Q==", "user"=>{"first_name"=>"Pete", "last_name"=>"Slyvestaaaaah", "username"=>"slyvestaaaaaah", "email"=>"pete@pete.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pete@pete.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "slyvestaaaaaah"], ["LIMIT", 1]]
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pete"], ["last_name", "Slyvestaaaaah"], ["username", "slyvestaaaaaah"], ["email", "pete@pete.com"], ["encrypted_password", "$2a$11$F6cNbNzJM7UzIrlGMEnBi.JsTMuhsu3qCU6vxZrb8qEvKKBCMMKlK"], ["created_at", 2017-07-10 19:47:57 UTC], ["updated_at", 2017-07-10 19:47:57 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-07-10 19:47:57 UTC], ["last_sign_in_at", 2017-07-10 19:47:57 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", 2017-07-10 19:47:57 UTC], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 180ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 15:47:58 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:48:00 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.5ms)
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 15:48:18 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.7ms)
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:48:22 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.5ms)
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "battles"[0m
+Started GET "/" for ::1 at 2017-07-10 15:49:07 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 109ms (Views: 102.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 15:49:13 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 89.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:49:17 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (52.3ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.5ms)
+Started GET "/" for ::1 at 2017-07-10 15:51:59 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 120.9ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:52:03 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.6ms)
+Started DELETE "/users/sign_out" for ::1 at 2017-07-10 15:52:10 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dTzz9TQ5oCsJ3lh0vQ5R9duDaFeqjKhe6JW7LZC4suV5D+mlwOO4PN5ioP+VppU77jtjcU3UN1ADY5tKl1kbcA=="}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 15:52:11 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:52:13 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.7ms)
+Started GET "/users/sign_in" for ::1 at 2017-07-10 15:54:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 129ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-07-10 15:54:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iybdNLxebE7Noslb/vFV5RtzhdalHtLsv1YaNQ5C67gjw2ieGE7/JhJOiYBfeTE46OZL6lnRGBRVBfespljrFw==", "user"=>{"email"=>"pete@pete.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "pete@pete.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-07-10 19:54:35 UTC], ["sign_in_count", 2], ["updated_at", 2017-07-10 19:54:35 UTC], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 179ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 15:54:35 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 76.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 15:54:37 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.8ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.6ms)
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:00:47 -0400
+  
+SyntaxError (/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+      :contributor_id
+       ^
+/Users/johnduggan/challenges/react-practice/app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/api/v1/battles_controller.rb:29: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/api/v1/battles_controller.rb:30: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:03:36 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"", "location"=>"", "year"=>"", "winner"=>"", "battle"=>{"name"=>"", "year"=>"", "location"=>"", "winner"=>""}}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 4.9ms)
+
+
+  
+NameError (undefined local variable or method `debugger' for #<Api::V1::BattlesController:0x007fc6e2d5abc8>):
+  
+app/controllers/api/v1/battles_controller.rb:13:in `create'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.9ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:08:29 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"sdafasdf", "location"=>"asdfasdf", "year"=>"asdfasdf", "winner"=>"asdfasdfasd", "battle"=>{"name"=>"sdafasdf", "year"=>"asdfasdf", "location"=>"asdfasdf", "winner"=>"asdfasdfasd"}}
+Started GET "/" for ::1 at 2017-07-10 16:08:48 -0400
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 136787ms (Views: 0.6ms | ActiveRecord: 10.5ms)
+
+
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 766ms (Views: 760.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:10:47 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (3.3ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 15ms (Views: 3.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:11:00 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfas", "location"=>"asdfasdf", "year"=>"asdfas", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfas", "year"=>"asdfas", "location"=>"asdfasdf", "winner"=>"asdfasdf"}}
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:11:03 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.1ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:11:30 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdf", "location"=>"asdf", "year"=>"asdf", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdf", "year"=>"asdf", "location"=>"asdf", "winner"=>"asdfasdf"}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 21080ms (Views: 0.2ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:11:58 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (4.3ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:12:20 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:13:08 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 227436ms (Views: 0.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 16:14:48 -0400
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:14:48 -0400
+Started GET "/" for ::1 at 2017-07-10 16:14:48 -0400
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:14:48 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasdf", "year"=>"asdfasdf", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfasdf", "location"=>"asdfasdf", "winner"=>"asdfasdf"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 35517ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+Processing by StaticPagesController#index as HTML
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 828ms (Views: 813.7ms | ActiveRecord: 8.8ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 912ms (Views: 903.8ms | ActiveRecord: 1.1ms)
+
+
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.3ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+  [1m[36mBattle Load (0.6ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 935ms (Views: 1.6ms | ActiveRecord: 8.1ms)
+
+
+Completed 200 OK in 17ms (Views: 1.2ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 16:16:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28887ms (Views: 28857.4ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:19:21 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 17ms (Views: 1.9ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:19:35 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasdf", "year"=>"asdfasdf", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfasdf", "location"=>"asdfasdf", "winner"=>"asdfasdf"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mBattle Load (0.8ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" ORDER BY "battles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 91106ms (Views: 0.2ms | ActiveRecord: 11.9ms)
+
+
+  [1m[36mBattle Load (0.6ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" ORDER BY "battles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-07-10 16:46:11 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 959ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    22:       <div class="top-bar-right">
+    23:         <ul class="menu">
+    24:           <% if signed_in? %>
+    25:           <li><%= current_user.first_name %> is currently signed in!</li>
+    26:           <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+    27:           <% else %>
+    28:           <li><%= link_to "Join", new_user_registration_path %></li>
+  
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb___617976224225902294_70282713204540'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.8ms)
+Started GET "/" for ::1 at 2017-07-10 16:46:53 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 92.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:46:53 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 16:47:20 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 126ms (Views: 112.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:47:20 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 16:47:40 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 141.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:47:40 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.0ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:47:49 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:48:08 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+Started GET "/" for ::1 at 2017-07-10 16:48:10 -0400
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 49301ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 105.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:48:58 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 2517ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 16:49:06 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:49:07 -0400
+Processing by Api::V1::BattlesController#index as */*
+Started GET "/" for ::1 at 2017-07-10 16:49:14 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 92.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:49:15 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.6ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 41204ms (Views: 2.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:50:05 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasdf", "year"=>"asdfasdf", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfasdf", "location"=>"asdfasdf", "winner"=>"asdfasdf"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 75104ms (Views: 0.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:54:15 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfa", "location"=>"sadf", "year"=>"asdfa", "winner"=>"asdf", "battle"=>{"name"=>"asdfa", "year"=>"asdfa", "location"=>"sadf", "winner"=>"asdf"}}
+Started GET "/battles/new" for ::1 at 2017-07-10 16:54:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/new"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (20.0ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.9ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.9ms)
+Started GET "/" for ::1 at 2017-07-10 16:54:24 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 1005ms (Views: 1001.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 16:54:30 -0400
+Processing by Api::V1::BattlesController#index as */*
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 16:54:40 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasdf", "year"=>"asdfasd", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfasd", "location"=>"asdfasdf", "winner"=>"asdfasdf"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 32627ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/battles/new" for ::1 at 2017-07-10 16:57:38 -0400
+Completed 401 Unauthorized in 529858ms (ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 221975ms (ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 206748ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 17:05:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (7.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1592ms (Views: 1586.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 17:05:32 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (5.0ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 21410ms (Views: 2.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-07-10 17:06:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 141ms (Views: 110.1ms | ActiveRecord: 16.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-07-10 17:06:09 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W1vJN1ygT8UPPWZRMiVEpqB3focNM7FhriC63E267c+dpeBdEuqt+NJGhx2sS3nEKhdKRnuZ7u+nCfUggJrIFg==", "user"=>{"email"=>"pete@pete.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "pete@pete.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-07-10 21:06:09 UTC], ["last_sign_in_at", 2017-07-10 19:54:35 UTC], ["sign_in_count", 3], ["updated_at", 2017-07-10 21:06:09 UTC], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 187ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/" for ::1 at 2017-07-10 17:06:09 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 76.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 17:06:09 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 4295ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 17:08:42 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasdf", "year"=>"asdfas", "winner"=>"asdfas", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfas", "location"=>"asdfasdf", "winner"=>"asdfas"}}
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 17:08:49 -0400
+Completed 401 Unauthorized in 34523ms (ActiveRecord: 5.6ms)
+
+
+  [1m[36mBattle Load (0.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 17:09:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasdf", "year"=>"asdfasdf", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfasdf", "location"=>"asdfasdf", "winner"=>"asdfasdf"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 47851ms (Views: 0.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 17:10:36 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.6ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 2773ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4278203296885734510);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveContributorIdFromBattlesTable (20170710211602)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.7ms)[0m  [1m[35mALTER TABLE "battles" DROP "contributor_id"[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170710211602"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4278203296885734510)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'battles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4278203296885734510);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToBattlesTable (20170710211716)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "battles" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170710211716"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4278203296885734510)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'battles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBattle Load (0.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 17:22:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasd", "year"=>"asdfasd", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfasd", "location"=>"asdfasd", "winner"=>"asdfasdf"}}
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 17:22:42 -0400
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 20014ms (Views: 0.2ms | ActiveRecord: 11.2ms)
+
+
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"", "location"=>"", "year"=>"", "winner"=>"", "battle"=>{"name"=>"", "year"=>"", "location"=>"", "winner"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 14665ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 17:23:35 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 22ms (Views: 1.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/battles/new" for ::1 at 2017-07-10 17:26:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/new"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (16.7ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.3ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (93.1ms)
+Started GET "/" for ::1 at 2017-07-10 17:26:16 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 1394ms (Views: 1380.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 17:26:17 -0400
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApiController> at /Users/johnduggan/challenges/react-practice/app/controllers/api_controller.rb:4)
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-07-10 17:26:24 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"asdfasdf", "location"=>"asdfasdf", "year"=>"asdfasdf", "winner"=>"asdfasdf", "battle"=>{"name"=>"asdfasdf", "year"=>"asdfasdf", "location"=>"asdfasdf", "winner"=>"asdfasdf"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO "battles" ("name", "year", "location", "winner", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "asdfasdf"], ["year", "asdfasdf"], ["location", "asdfasdf"], ["winner", "asdfasdf"], ["user_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 26341ms (Views: 0.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-07-10 17:26:57 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+

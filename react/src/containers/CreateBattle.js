@@ -45,7 +45,6 @@ class CreateBattle extends Component {
     }
 
     handleFormSubmit(event) {
-      debugger;
       event.preventDefault()
       let formPayload= {
         name: this.state.name,
@@ -53,7 +52,6 @@ class CreateBattle extends Component {
         year: this.state.year,
         winner: this.state.winner
       }
-      debugger;
       fetch(`/api/v1/battles`,{
         method: 'POST',
         credentials: 'same-origin',

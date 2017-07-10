@@ -2,8 +2,7 @@ class Api::V1::BattlesController < ApiController
   skip_before_action :verify_authenticity_token
 
   def index
-    @battles = Battle.all
-    render json: @battles
+    render json: Battle.all
   end
 
   def show
@@ -12,6 +11,8 @@ class Api::V1::BattlesController < ApiController
 
   def create
     battle = Battle.new(battle_params)
+    battle.user = current_user
+    # binding.pry
     if battle.save
       render json: battle
     else
@@ -19,14 +20,14 @@ class Api::V1::BattlesController < ApiController
     end
   end
 
-  private 
+  private
 
   def battle_params
     params.require(:battle).permit(
       :name,
       :year,
       :location,
-      :winner
+      :winner,
     )
   end
 

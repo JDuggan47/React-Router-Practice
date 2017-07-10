@@ -4,8 +4,6 @@ class Battle < ApplicationRecord
   validates :location, presence: true
   validates :winner, presence: true
 
-  validates :contributor_id, presence: true
-
-  belongs_to :contributor, class_name: "User"
+  belongs_to :user
   has_many :comments
 end
