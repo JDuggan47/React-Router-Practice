@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :battles
+      resources :battles do
+        resources :comments
+      end
+      resources :comments
     end
   end
 

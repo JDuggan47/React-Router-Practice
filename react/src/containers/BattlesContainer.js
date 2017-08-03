@@ -14,7 +14,6 @@ class BattlesContainer extends Component {
     debugger;
     fetch('/api/v1/battles')
       .then(response => {
-        debugger;
         if (response.ok) {
           return response;
         } else {
