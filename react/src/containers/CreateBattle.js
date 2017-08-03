@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import { Redirct } from 'react-router'
 import NewBattleForm from '../components/NewBattleForm'
+
 
 class CreateBattle extends Component {
   constructor(props){
@@ -9,14 +11,15 @@ class CreateBattle extends Component {
       year:'',
       location:'',
       winner:'',
-      battles: []
+      battles: [],
+      userBattles: []
     }
-    this.handleNameChange = this.handleNameChange.bind(this)
-    this.handleYearChange = this.handleYearChange.bind(this)
-    this.handleLocationChange = this.handleLocationChange.bind(this)
-    this.handleWinnerChange = this.handleWinnerChange.bind(this)
-    this.handleFormSubmit = this.handleFormSubmit.bind(this)
-    this.handleClearForm = this.handleClearForm.bind(this)
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleYearChange = this.handleYearChange.bind(this);
+    this.handleLocationChange = this.handleLocationChange.bind(this);
+    this.handleWinnerChange = this.handleWinnerChange.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleClearForm = this.handleClearForm.bind(this);
   }
 
     handleNameChange(event) {
@@ -44,6 +47,7 @@ class CreateBattle extends Component {
       })
     }
 
+
     handleFormSubmit(event) {
       event.preventDefault()
       let formPayload= {
@@ -52,6 +56,7 @@ class CreateBattle extends Component {
         year: this.state.year,
         winner: this.state.winner
       }
+
       fetch(`/api/v1/battles`,{
         method: 'POST',
         credentials: 'same-origin',
@@ -73,6 +78,7 @@ class CreateBattle extends Component {
           let newState = currentState.concat(newBattle)
           this.setState({battles: newState});
         })
+        .then(this.handleRedirct)
         .catch(error => console.error(`Error in fetch: ${error.message}`));
       this.handleClearForm(event);
     }

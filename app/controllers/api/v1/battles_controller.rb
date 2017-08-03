@@ -6,7 +6,7 @@ class Api::V1::BattlesController < ApiController
   end
 
   def show
-    battle = Battle.find(params[:id])
+    render json: Battle.find(params[:id])
   end
 
   def create
