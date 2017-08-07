@@ -11,6 +11,7 @@ class CreateBattle extends Component {
       year:'',
       location:'',
       winner:'',
+      redirect: false,
       battles: [],
       userBattles: []
     }
@@ -20,6 +21,7 @@ class CreateBattle extends Component {
     this.handleWinnerChange = this.handleWinnerChange.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
+    this.handleRedirct = this.handleRedirct.bind(this);
   }
 
     handleNameChange(event) {
@@ -45,6 +47,10 @@ class CreateBattle extends Component {
         location:'',
         winner: ''
       })
+    }
+
+    handleRedirct() {
+      this.props.router.push('/');
     }
 
 
@@ -77,8 +83,8 @@ class CreateBattle extends Component {
           let newBattle = battle
           let newState = currentState.concat(newBattle)
           this.setState({battles: newState});
+          this.setState({redirect: true});
         })
-        .then(this.handleRedirct)
         .catch(error => console.error(`Error in fetch: ${error.message}`));
       this.handleClearForm(event);
     }

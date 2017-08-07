@@ -8652,3 +8652,409 @@ Processing by Api::V1::BattlesController#show as */*
 Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/battles/10" for ::1 at 2017-08-03 18:39:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/10"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (44.8ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (128.6ms)
+Started GET "/" for ::1 at 2017-08-03 18:39:41 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 815ms (Views: 812.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-03 18:39:42 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-08-03 18:40:01 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"Battle the Mossman", "location"=>"Texas, Alabama", "year"=>"2015", "winner"=>"Mossman", "battle"=>{"name"=>"Battle the Mossman", "year"=>"2015", "location"=>"Texas, Alabama", "winner"=>"Mossman"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.1ms)[0m  [1m[32mINSERT INTO "battles" ("name", "year", "location", "winner", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Battle the Mossman"], ["year", "2015"], ["location", "Texas, Alabama"], ["winner", "Mossman"], ["user_id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 41ms (Views: 0.3ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/battles/new" for ::1 at 2017-08-03 18:41:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/new"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (8.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.7ms)
+Started GET "/" for ::1 at 2017-08-03 18:41:09 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 626ms (Views: 623.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-03 18:41:25 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 613ms (Views: 611.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-03 18:41:27 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.2ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/battles/10" for ::1 at 2017-08-03 19:44:38 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mBattle Load (0.9ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-03 19:44:39 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.1ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/battles/13" for ::1 at 2017-08-03 19:44:40 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-03 19:44:46 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 11:49:20 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 844ms (Views: 824.8ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:49:22 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.0ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 50ms (Views: 5.0ms | ActiveRecord: 40.7ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-08-05 11:49:30 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"sdfasf", "location"=>"asdfa", "year"=>"asdfsd", "winner"=>"asdfadf", "battle"=>{"name"=>"sdfasf", "year"=>"asdfsd", "location"=>"asdfa", "winner"=>"asdfadf"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.2ms)[0m  [1m[32mINSERT INTO "battles" ("name", "year", "location", "winner", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "sdfasf"], ["year", "asdfsd"], ["location", "asdfa"], ["winner", "asdfadf"], ["user_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-08-05 11:49:54 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"Steve", "location"=>"Texas", "year"=>"1922", "winner"=>"Mossman", "battle"=>{"name"=>"Steve", "year"=>"1922", "location"=>"Texas", "winner"=>"Mossman"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[32mINSERT INTO "battles" ("name", "year", "location", "winner", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Steve"], ["year", "1922"], ["location", "Texas"], ["winner", "Mossman"], ["user_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:49:56 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/battles/13" for ::1 at 2017-08-05 11:55:42 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mBattle Load (0.8ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:55:45 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.6ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/battles/15" for ::1 at 2017-08-05 11:55:46 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:55:50 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/battles/10" for ::1 at 2017-08-05 11:55:52 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mBattle Load (0.9ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:55:56 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 11:56:25 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 126ms (Views: 123.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:56:25 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-08-05 11:56:30 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"h", "location"=>"", "year"=>"", "winner"=>"", "battle"=>{"name"=>"h", "year"=>"", "location"=>"", "winner"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:56:31 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-08-05 11:56:38 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"", "location"=>"", "year"=>"", "winner"=>"jjjj", "battle"=>{"name"=>"", "year"=>"", "location"=>"", "winner"=>"jjjj"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:56:41 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.3ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 11:59:58 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/battles/12" for ::1 at 2017-08-05 14:22:37 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBattle Load (3.1ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 4.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 14:22:38 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/battles/11" for ::1 at 2017-08-05 14:22:40 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mBattle Load (1.6ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 14:22:41 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.1ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/battles/14" for ::1 at 2017-08-05 14:22:43 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mBattle Load (1.7ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 14:22:44 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.6ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/battles/10" for ::1 at 2017-08-05 14:22:45 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mBattle Load (1.3ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 14:22:46 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 14:22:49 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-05 14:22:51 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/battles/12" for ::1 at 2017-08-06 09:01:17 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBattle Load (6.2ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 3.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-06 09:01:19 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (6.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/battles/11" for ::1 at 2017-08-06 09:01:20 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mBattle Load (1.6ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-06 09:01:22 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.0ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/battles/10" for ::1 at 2017-08-06 09:01:25 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mBattle Load (1.1ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-06 09:01:26 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/battles/12" for ::1 at 2017-08-06 09:01:27 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBattle Load (1.4ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-06 09:01:28 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (3.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-06 09:01:33 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QvrwvrL21SfcLBbcGN4foRs8+yXql+T+MaRywDPGROApJHUg2YDD/gKdxbYPpLQs37ZtyGbQHGJzD01lbPfcCw=="}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 55ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-06 09:01:33 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 185ms (Views: 183.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-06 09:01:38 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
