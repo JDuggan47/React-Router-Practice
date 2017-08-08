@@ -11,7 +11,7 @@ class Api::V1::BattlesController < ApiController
 
   def create
     battle = Battle.new(battle_params)
-    battle.user = current_user
+    battle.creator = current_user
     # binding.pry
     if user_signed_in?
       if battle.save

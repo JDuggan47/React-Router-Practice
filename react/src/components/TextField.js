@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewBattleForm = props => {
+const TextField = props => {
   return (
     <div className='row'>
         <textarea
@@ -12,4 +12,4 @@ const NewBattleForm = props => {
   )
 }
 
-export default NewBattleForm
+export default TextField

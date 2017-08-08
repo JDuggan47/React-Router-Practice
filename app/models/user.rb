@@ -13,7 +13,6 @@ class User < ApplicationRecord
   validates :username, format: { with: /\A(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,17}\z/,
     message: "can only contain characters a-z, 0-9, underscores and periods" }
 
-
   has_many :comments
-  has_many :battles
+  has_many :battles, foreign_key: :creator_id
 end

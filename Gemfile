@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'listen'
 gem 'devise'
 gem 'foundation-rails'
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   gem 'capybara'
