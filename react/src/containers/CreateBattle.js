@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Redirct } from 'react-router'
-import NewBattleForm from '../components/NewBattleForm'
+import Textfield from '../components/Textfield'
 
 
 class CreateBattle extends Component {
@@ -11,8 +11,7 @@ class CreateBattle extends Component {
       year:'',
       location:'',
       winner:'',
-      battles: [],
-      userBattles: []
+      battles: []
     }
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleYearChange = this.handleYearChange.bind(this);
@@ -47,10 +46,9 @@ class CreateBattle extends Component {
       })
     }
 
-
     handleFormSubmit(event) {
       event.preventDefault()
-      let formPayload= {
+      let formPayload = {
         name: this.state.name,
         location: this.state.location,
         year: this.state.year,
@@ -64,10 +62,12 @@ class CreateBattle extends Component {
         body: JSON.stringify(formPayload)
       })
         .then(response => {
+          debugger;
           if (response.ok) {
             let battle = response.json()
             return battle;
           } else {
+            debugger;
             let errorMessage = `${response.status} ($response.statusText)`,
               error = new Error(errorMessage);
             throw(error); }
@@ -78,7 +78,6 @@ class CreateBattle extends Component {
           let newState = currentState.concat(newBattle)
           this.setState({battles: newState});
         })
-        .then(this.handleRedirct)
         .catch(error => console.error(`Error in fetch: ${error.message}`));
       this.handleClearForm(event);
     }
@@ -89,25 +88,25 @@ class CreateBattle extends Component {
         <h1 className='text-center'>Submit a Battle!</h1>
         <div className='row'>
           <form onSubmit={this.handleFormSubmit}>
-            <NewBattleForm
+            <Textfield
               content={this.state.name}
               label='Name of Battle'
               name='Name'
               handleFunction={this.handleNameChange}
             />
-            <NewBattleForm
+            <Textfield
               content={this.state.location}
               label='Location of Battle'
               name='Location'
               handleFunction={this.handleLocationChange}
             />
-            <NewBattleForm
+            <Textfield
               content={this.state.year}
               label='Year of Battle'
               name='Year'
               handleFunction={this.handleYearChange}
             />
-            <NewBattleForm
+            <Textfield
               content={this.state.winner}
               label='Winner of Battle'
               name='Winner'

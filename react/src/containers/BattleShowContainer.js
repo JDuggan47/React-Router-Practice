@@ -9,8 +9,9 @@ class BattleShowContainer extends Component {
       battle: []
     }
   }
-
+  
   getData(){
+    debugger;
     fetch(`/api/v1/battles/${this.props.params.id}`, {credentials: 'same-origin'})
     .then(response => {
       if (response.ok) {

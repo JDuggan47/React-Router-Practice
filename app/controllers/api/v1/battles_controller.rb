@@ -11,12 +11,16 @@ class Api::V1::BattlesController < ApiController
 
   def create
     battle = Battle.new(battle_params)
-    battle.user = current_user
+    battle.creator = current_user
     # binding.pry
-    if battle.save
-      render json: battle
+    if user_signed_in?
+      if battle.save
+        render json: battle
+      else
+        render json: {messages: battle.errors.full_messages}
+      end
     else
-      render json: {messages: battle.errors.full_messages}
+      render json: ['Please sign in first']
     end
   end
 
