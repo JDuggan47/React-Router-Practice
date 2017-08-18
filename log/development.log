@@ -12562,3 +12562,1063 @@ Processing by Api::V1::BattlesController#index as */*
 Completed 200 OK in 27ms (Views: 17.8ms | ActiveRecord: 8.3ms)
 
 
+Started GET "/" for ::1 at 2017-08-18 15:02:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (5.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1731ms (Views: 1725.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:02:05 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (5.3ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (110.09ms)
+Completed 200 OK in 183ms (Views: 127.2ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:11:03 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 816ms (Views: 815.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:11:30 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 648ms (Views: 647.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:11:31 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.2ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.49ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/battles/16" for ::1 at 2017-08-18 15:11:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/16"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (16.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (32.6ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.9ms)
+Started GET "/battles/17" for ::1 at 2017-08-18 15:12:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/17"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (11.7ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.0ms)
+Started GET "/" for ::1 at 2017-08-18 15:12:20 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 609ms (Views: 607.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:12:23 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.78ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:13:06 -0400
+Processing by Api::V1::BattlesController#show as */*
+Started GET "/battles/16" for ::1 at 2017-08-18 15:13:06 -0400
+  Parameters: {"id"=>"16"}
+  
+ActionController::RoutingError (No route matches [GET] "/battles/16"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (9.46ms)
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 3.0ms)
+
+
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (9.8ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.3ms)
+Started GET "/" for ::1 at 2017-08-18 15:13:14 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 123ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:13:18 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (8.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (42.65ms)
+Completed 200 OK in 49ms (Views: 34.3ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:13:36 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 127ms (Views: 125.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:14:21 -0400
+Processing by Api::V1::BattlesController#index as */*
+Started GET "/" for ::1 at 2017-08-18 15:14:21 -0400
+  [1m[36mBattle Load (16.1ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (2.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (44.52ms)
+Completed 200 OK in 64ms (Views: 40.8ms | ActiveRecord: 22.8ms)
+
+
+Completed 200 OK in 805ms (Views: 803.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:14:23 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.1ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.15ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:14:27 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.75ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:14:29 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (3.3ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (8.08ms)
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:14:31 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.06ms)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/battles/17" for ::1 at 2017-08-18 15:14:32 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (9.12ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:14:34 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.1ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.64ms)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:14:46 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 624ms (Views: 623.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:14:47 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (2.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.36ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/battles/16" for ::1 at 2017-08-18 15:15:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/16"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (13.1ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.9ms)
+Started GET "/" for ::1 at 2017-08-18 15:15:29 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 632ms (Views: 631.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:15:30 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.2ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.66ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:15:32 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (5.39ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:16:59 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.81ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:17:00 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (9.7ms)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:17:47 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.15ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:17:48 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (9.37ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:18:06 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.81ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:18:07 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (7.05ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 15:18:09 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 631ms (Views: 629.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-08-18 15:18:16 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fjd9wP0QSHYR2hFDZtWxd2Snk9JMqXmIOhGZDzxOjpRGvwDLPpH+5727ZTbxmKAsdHmUgdnp49ZdqPtAIR9HDA==", "user"=>{"email"=>"boles@boles.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "boles@boles.com"], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-08-18 19:18:16 UTC], ["last_sign_in_at", 2017-08-15 20:26:26 UTC], ["sign_in_count", 7], ["updated_at", 2017-08-18 19:18:16 UTC], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:18:16 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:19:23 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 591ms (Views: 588.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:19:24 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.96ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:19:34 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (7.52ms)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:19:59 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.62ms)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:20:00 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (8.12ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:20:20 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.9ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (3.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.62ms)
+Completed 200 OK in 20ms (Views: 14.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:20:21 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 735ms (Views: 732.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:20:22 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.03ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/battles/16" for ::1 at 2017-08-18 15:23:32 -0400
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:23:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/16"):
+  
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  [1m[36mBattle Load (8.4ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (5.76ms)
+Completed 200 OK in 18ms (Views: 7.2ms | ActiveRecord: 10.0ms)
+
+
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (8.7ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.1ms)
+Started GET "/" for ::1 at 2017-08-18 15:23:35 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:23:36 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.96ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:24:20 -0400
+Started GET "/battles/16" for ::1 at 2017-08-18 15:24:20 -0400
+Processing by Api::V1::BattlesController#show as */*
+  
+  Parameters: {"id"=>"16"}
+ActionController::RoutingError (No route matches [GET] "/battles/16"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  [1m[36mBattle Load (0.6ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (4.66ms)
+Completed 200 OK in 11ms (Views: 5.2ms | ActiveRecord: 4.8ms)
+
+
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (8.3ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.5ms)
+Started GET "/" for ::1 at 2017-08-18 15:24:22 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 624ms (Views: 622.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:24:24 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.98ms)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:24:25 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (7.82ms)
+Completed 200 OK in 17ms (Views: 9.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:36:39 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.15ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:36:41 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (7.8ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:37:07 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (1.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (3.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.2ms)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:37:09 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 645ms (Views: 643.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:37:11 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (3.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.27ms)
+Completed 200 OK in 22ms (Views: 15.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/battles/16" for ::1 at 2017-08-18 15:37:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/battles/16"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (11.4ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.6ms)
+Started GET "/" for ::1 at 2017-08-18 15:37:45 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 668ms (Views: 666.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:37:46 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.63ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:37:48 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (2.0ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (1.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (11.85ms)
+Completed 200 OK in 18ms (Views: 9.0ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:38:25 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (4.8ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.32ms)
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:38:27 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 602ms (Views: 600.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 15:38:49 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 587ms (Views: 585.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 15:38:50 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.28ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:38:52 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (2.3ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (10.78ms)
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/battles/16" for ::1 at 2017-08-18 15:58:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/battles/16"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/johnduggan/.rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (11.9ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.5ms)
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:58:42 -0400
+Processing by Api::V1::BattlesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.6ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (35.11ms)
+Completed 200 OK in 79ms (Views: 47.0ms | ActiveRecord: 18.2ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (7.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "battle_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "Eh, I thought this battle was not that significant"], ["user_id", 1], ["battle_id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 15:59:59 -0400
+Processing by Api::V1::BattlesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (6.82ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 16:03:22 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 114.9ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 16:03:22 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (45.56ms)
+Completed 200 OK in 58ms (Views: 52.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 16:03:26 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (5.79ms)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 16:04:18 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.5ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (47.96ms)
+Completed 200 OK in 66ms (Views: 50.7ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/api/v1/battles" for ::1 at 2017-08-18 16:04:40 -0400
+Processing by Api::V1::BattlesController#create as */*
+  Parameters: {"name"=>"Markman vs. Mossman", "location"=>"Needham, Ma", "year"=>"2017", "winner"=>"Marking", "battle"=>{"name"=>"Markman vs. Mossman", "year"=>"2017", "location"=>"Needham, Ma", "winner"=>"Marking"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `debugger' for #<Api::V1::BattlesController:0x007f8d2f4c5b08>):
+  
+app/controllers/api/v1/battles_controller.rb:13:in `create'
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/johnduggan/.gem/ruby/2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.3ms)
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 16:05:04 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (48.25ms)
+Completed 200 OK in 63ms (Views: 54.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/battles" for ::1 at 2017-08-18 16:07:25 -0400
+Processing by Api::V1::BattlesController#index as */*
+  [1m[36mBattle Load (0.4ms)[0m  [1m[34mSELECT "battles".* FROM "battles"[0m
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 17]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (44.19ms)
+Completed 200 OK in 60ms (Views: 50.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/battles/16" for ::1 at 2017-08-18 16:07:26 -0400
+Processing by Api::V1::BattlesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mBattle Load (0.7ms)[0m  [1m[34mSELECT  "battles".* FROM "battles" WHERE "battles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."battle_id" = $1[0m  [["battle_id", 16]]
+[active_model_serializers] No serializer found for resource: #<Comment id: 1, body: "This battle was awesome!!!", user_id: 1, battle_id: 16>
+[active_model_serializers] Rendered Api::V1::BattleSerializer with ActiveModelSerializers::Adapter::Attributes (9.97ms)
+Completed 200 OK in 17ms (Views: 9.6ms | ActiveRecord: 5.4ms)
+
+
