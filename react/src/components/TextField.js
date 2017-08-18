@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextField = props => {
+const Textfield = props => {
   return (
     <div className='row'>
         <textarea
@@ -12,4 +12,4 @@ const TextField = props => {
   )
 }
 
-export default TextField
+export default Textfield

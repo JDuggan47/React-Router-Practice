@@ -11,6 +11,7 @@ class BattlesContainer extends Component {
   }
 
   getData() {
+    debugger;
     fetch('/api/v1/battles')
       .then(response => {
         if (response.ok) {
@@ -23,7 +24,9 @@ class BattlesContainer extends Component {
       })
       .then(response => response.json())
       .then(body => {
+        debugger;
         this.setState({battles: body});
+        debugger;
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }

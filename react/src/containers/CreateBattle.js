@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Redirct } from 'react-router'
-import TextField from '../components/Textfield'
+import Textfield from '../components/Textfield'
 
 
 class CreateBattle extends Component {

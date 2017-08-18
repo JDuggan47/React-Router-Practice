@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import BattleShowTile from '../components/BattleShowTile'
-import CommentTile from '../components/CommentTile'
 import 'whatwg-fetch';
 
 class BattleShowContainer extends Component {
@@ -10,7 +9,7 @@ class BattleShowContainer extends Component {
       battle: []
     }
   }
-
+  
   getData(){
     debugger;
     fetch(`/api/v1/battles/${this.props.params.id}`, {credentials: 'same-origin'})
@@ -44,7 +43,6 @@ class BattleShowContainer extends Component {
           location={this.state.battle.location}
           winner={this.state.battle.winner}
         />
-        <CommentTile />
       </div>
     )
   }
