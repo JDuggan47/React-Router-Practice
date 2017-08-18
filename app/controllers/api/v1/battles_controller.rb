@@ -10,6 +10,7 @@ class Api::V1::BattlesController < ApiController
   end
 
   def create
+    binding.pry
     battle = Battle.new(battle_params)
     battle.creator = current_user
     # binding.pry

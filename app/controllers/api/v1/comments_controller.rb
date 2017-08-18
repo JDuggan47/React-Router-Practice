@@ -7,16 +7,15 @@ class Api::V1::CommentsController < ApiController
     render json: comments
   end
 
+  def new
+    battle = Battle.find(params[:battle_id])
+    comment = Comment.new
+  end
+
   def create
-    body = request.body.read
-    parsed = JSON.parse(body)
+    battle = Battle.find(params[:battle_id])
+    comment = Comment.new(:body, user_id: current_user.id, battle_id: battle)
 
-    comment = parsed['comment']
-    user_id = parsed['user_id']
-    battle_id = parsed['battle_id']
-
-    new_comment = Comment.new(body: comment, user_id: user_id, battle_id: battle_id )
-    comment.user = current_user
     if user_signed_in?
       if comment.save
         render json: comment
@@ -27,14 +26,5 @@ class Api::V1::CommentsController < ApiController
       render json: ['Please sign in first']
     end
   end
-
-  private
-
-  def comment_params
-    params.require(:comment).permit(
-      :body,
-    )
-  end
-
 
 end

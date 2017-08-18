@@ -62,7 +62,6 @@ class CreateBattle extends Component {
         body: JSON.stringify(formPayload)
       })
         .then(response => {
-          debugger;
           if (response.ok) {
             let battle = response.json()
             return battle;
